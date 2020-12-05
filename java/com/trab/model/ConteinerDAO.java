@@ -1,5 +1,8 @@
 package com.trab.model;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
@@ -28,5 +31,16 @@ public class ConteinerDAO{
 				cont.getStatus(),
 				cont.getCategoria()
 		});
+	}
+	
+	public Map<String, Object> getConteiner(int id){
+		String sql = "SELECT * FROM conteiner WHERE conteiner.id = ?";
+		return jdbc.queryForMap(sql, new Object[] {id});
+	}
+	
+	public List<Map<String, Object>> getConteiners(){
+		String sql = "SELECT * FROM Conteiner";
+		List<Map<String, Object>> conteiners = (List<Map<String, Object>>) jdbc.queryForList(sql);
+		return conteiners;
 	}
 }
