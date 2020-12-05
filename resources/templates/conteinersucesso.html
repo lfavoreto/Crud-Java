@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cadastro Contêiner</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style-sucesso.css">
+</head>
+<body>
+	<div class="cab">
+		<h1>CRUD JAVA</h1>
+	</div>
+	<div class="container">
+		<div class="tb">
+			<h2>Contêiner Cadastrado</h2>
+			<div class="conteudo">
+				<div th:text="'Cliente : ' + ${cont.nome} "></div>
+				<div th:text="'Número do Conteiner : ' + ${cont.nmconteiner} "></div>
+				<div th:text="'Tipo : ' + ${cont.tipo} "></div>
+				<div th:text="'Status : ' + ${cont.status} "></div>
+				<div th:text="'Categoria : ' + ${cont.categoria} "></div>
+			</div>
+			
+			<a href="/conteiner">Voltar</a>
+			<a href="/conteiners">Ver Lista</a>
+		</div>
+	</div>
+</body>
+</html>

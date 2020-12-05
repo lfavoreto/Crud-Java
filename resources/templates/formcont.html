@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cadastro Contêiner</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style-form.css">
+</head>
+<body>
+	<div class="container">
+		<div class="cab">
+			<h1>CRUD JAVA</h1>
+		</div>
+
+		<div class="tb">
+			<ul>
+				<li><a href="#" id="bd-esc">Contêiner</a></li>
+				<li><a href="#">Movimentações</a></li>
+			</ul>
+
+			<div class="box">
+				<div class="menu">
+					<h2>Opções</h2>
+					
+					<ul>
+						<li><a href="/conteiner" id="cd">Cadastrar</a></li>
+						<li><a href="/conteiners">Listar</a></li>
+						<li><a href="/">Voltar para o inicio</a></li>
+					</ul>
+				</div>
+				
+				<form action="#" th:action="@{/conteiner}" th:object="${cont}" method="POST">
+
+					<label for="nome" class="first-lb">Cliente</label>
+					<input type="text" id="nome" th:field="*{nome}" required>
+					
+					<label for="conteiner">Número do Contêiner</label>
+					<input type="text" id="conteiner" th:field="*{nmconteiner}" required>
+					
+					<label>Tipo</label>
+					<input type="radio" name="tip" id="20" value="20" th:field="*{tipo}" required>
+					<label for="20" class="ty">20</label>
+					<input type="radio" name="tip" id="40" value="40" th:field="*{tipo}" required>
+					<label for="40" class="ty">40</label>
+					
+					<label>Status</label> 
+					<input type="radio" name="stat" id="cheio" value="Cheio" th:field="*{status}" required>
+					<label for="cheio" class="ty">Cheio</label>
+					<input type="radio" name="stat" id="vazio" value="Vazio" th:field="*{status}" required>
+					<label for="vazio" class="ty">Vazio</label>
+				
+					<label>Categoria</label> 
+					<input type="radio" name="cat" id="im" value="Importação" th:field="*{categoria}" required> 
+					<label for="im" class="ty">Importação</label>
+					<input type="radio" name="cat" id="ex" value="Exportação" th:field="*{categoria}" required> 
+					<label for="ex" class="ty">Exportação</label>
+					
+					<input type="submit" id="botao" value="Cadastrar">
+				</form>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

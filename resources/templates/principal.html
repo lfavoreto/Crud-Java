@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cadastro Contêiner</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="cab">
+		<h1>CRUD JAVA</h1>
+	</div>
+	<div class="container">
+		<div class="tb">
+			<h2 th:text="${nome}"></h2>
+			<ul>
+				<li><a th:href="@{/conteiner}" id="bd-esc">Contêiner</a></li>
+				<li><a href="#">Movimentações</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
