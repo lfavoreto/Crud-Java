@@ -26,4 +26,8 @@ public class DestinoService {
 	public void deleteDestino(int id) {
 		ddao.deleteDestino(id);
 	}
+	
+	public void updateDestino(int id, Destino dest) {
+		ddao.updateDestino(id, dest);
+	}
 }

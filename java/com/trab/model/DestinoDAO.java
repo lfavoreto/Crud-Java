@@ -47,4 +47,15 @@ public class DestinoDAO{
 		String sql = "DELETE FROM Destino WHERE id = ?";
 		jdbc.update(sql, new Object[] {id});
 	}
+	
+	public void updateDestino(int id, Destino dest) {
+		String sql = "UPDATE Destino SET nm_Carga = ?, nm_Bandeira = ?, ds_Origem = ?, ds_Destino = ? WHERE id = ?";
+		jdbc.update(sql, new Object[] {
+			dest.getCarga(),
+			dest.getBandeira(),
+			dest.getOrigem(),
+			dest.getDestino(),
+			id	
+		});
+	}
 }
