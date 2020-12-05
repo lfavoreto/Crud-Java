@@ -32,6 +32,7 @@
 				<table class="table table-striped table-primary">
 					<thead class="ttop">
 						<tr class="table-info">
+							<td></td>
 							<td><b>ID</b></td>
 							<td><b>NOME</b></td>
 							<td><b>NÚMERO CONTÊINER</b></td>
@@ -44,6 +45,9 @@
 					</thead>
 					<tbody>
 						<tr th:each="cont : ${conteiners}">
+							<td>
+								<a th:href="@{'conteiner/descr/' + ${cont.id}}">&#10148;</a>
+							</td>
 							<td th:text="${cont.id}"></td>
 							<td th:text="${cont.nm_Cliente}"></td>
 							<td th:text="${cont.cd_Conteiner}"></td>
@@ -51,12 +55,12 @@
 							<td th:text="${cont.ic_Status}"></td>
 							<td th:text="${cont.ic_Categoria}"></td>
 							<td>
-								<a th:href="@{'upd/' + ${cont.id}}">
+								<a th:href="@{'Dest/upd/' + ${cont.id}}">
 									<i class="fa fa-pencil" style="font-size:24px; color: #F7DC0F;"></i>
 								</a>
 							</td>
 							<td>
-								<form th:action="@{'apagar/' + ${cont.id}}" method="POST">
+								<form th:action="@{'/conteiner/apagar/' + ${cont.id}}" method="POST">
 									<input type="submit" value="X">
 								</form>
 							</td>

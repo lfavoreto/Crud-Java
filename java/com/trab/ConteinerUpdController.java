@@ -20,7 +20,7 @@ public class ConteinerUpdController {
 	@Autowired
 	private ApplicationContext context;
 	
-	@GetMapping("/upd/{id}")
+	@GetMapping("/Dest/upd/{id}")
 	public String updateForm(@PathVariable("id") int id, Model model) {
 		ConteinerService cdao = context.getBean(ConteinerService.class);
 		Map<String, Object> antigo = cdao.getConteiner(id);
@@ -30,7 +30,7 @@ public class ConteinerUpdController {
 		return "formcontupd";
 	}
 	
-	@PostMapping("/upd/{id}")
+	@PostMapping("/Dest/upd/{id}")
 	public String update(@PathVariable("id") int id, @ModelAttribute Conteiner cont, Model model) {
 		ConteinerService cdao = context.getBean(ConteinerService.class);
 		cdao.updateConteiner(id, cont);

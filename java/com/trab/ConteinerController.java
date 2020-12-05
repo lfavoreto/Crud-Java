@@ -35,7 +35,7 @@ public class ConteinerController {
 		return "conteinersucesso";
 	}
 	
-	@GetMapping("descr/{id}")
+	@GetMapping("conteiner/descr/{id}")
 	public String read(@PathVariable("id") int id, Model model) {
 		ConteinerService cdao = context.getBean(ConteinerService.class);
 		Map<String, Object> conteiner = cdao.getConteiner(id);
@@ -52,7 +52,7 @@ public class ConteinerController {
 		return "formlista";
 	}
 	
-	@PostMapping("/apagar/{id}")
+	@PostMapping("conteiner/apagar/{id}")
 	public String deletar(@PathVariable("id") int id, Model model) {
 		ConteinerService cdao = context.getBean(ConteinerService.class);
 		cdao.deleteConteiner(id);
