@@ -22,4 +22,8 @@ public class MovimentacaoService {
 	public List<Map<String, Object>> getMovimentacoes() {
 		return mdao.getMovimentacoes();
 	}
+	
+	public void deleteMovimentacao(int id) {
+		mdao.deleteMovimentacao(id);
+	}
 }

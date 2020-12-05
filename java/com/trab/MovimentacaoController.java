@@ -35,7 +35,7 @@ import com.trab.model.MovimentacaoService;
 			return "movimentacaosucesso";
 		}
 		
-		@GetMapping("mov/descr/{id}")
+		@GetMapping("Movimentacao/descr/{id}")
 		public String read(@PathVariable("id") int id, Model model) {
 			MovimentacaoService mdao = context.getBean(MovimentacaoService.class);
 			Map<String, Object> movimentacao = mdao.getMovimentacao(id);
@@ -50,5 +50,12 @@ import com.trab.model.MovimentacaoService;
 			List<Map<String, Object>> movimentacoes = mdao.getMovimentacoes();
 			model.addAttribute("movimentacoes", movimentacoes);
 			return "formlistam";
+		}
+		
+		@PostMapping("Movimentacao/apagar/{id}")
+		public String deletar(@PathVariable("id") int id, Model model) {
+			MovimentacaoService mdao = context.getBean(MovimentacaoService.class);
+			mdao.deleteMovimentacao(id);
+			return "redirect:/Movimentacoes";
 		}
 }

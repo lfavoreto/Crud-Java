@@ -42,4 +42,9 @@ public class MovimentacaoDAO{
 		List<Map<String, Object>> movimentacoes = (List<Map<String, Object>>) jdbc.queryForList(sql);
 		return movimentacoes;
 	}
+	
+	public void deleteMovimentacao(int id){
+		String sql = "DELETE FROM Movimentacao WHERE id = ?";
+		jdbc.update(sql, new Object[] {id});
+	}
 };
