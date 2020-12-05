@@ -26,4 +26,8 @@ public class ConteinerService {
 	public void deleteConteiner(int id) {
 		cdao.deleteConteiner(id);
 	}
+	
+	public void updateConteiner(int id, Conteiner cont) {
+		cdao.updateConteiner(id, cont);
+	}
 }

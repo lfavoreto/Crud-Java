@@ -48,4 +48,16 @@ public class ConteinerDAO{
 		String sql = "DELETE FROM Conteiner WHERE id = ?";
 		jdbc.update(sql, new Object[] {id});
 	}
+	
+	public void updateConteiner(int id, Conteiner cont) {
+		String sql = "UPDATE Conteiner SET nm_Cliente = ?, cd_Conteiner = ?, ic_Tipo = ?, ic_Status = ?, ic_Categoria = ?  WHERE id = ?";
+		jdbc.update(sql, new Object[] {
+			cont.getNome(), 
+			cont.getNmconteiner(), 
+			cont.getTipo(), 
+			cont.getStatus(), 
+			cont.getCategoria(), 
+			id	
+		});
+	}
 }
