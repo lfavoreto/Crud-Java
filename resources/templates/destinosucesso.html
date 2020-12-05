@@ -11,16 +11,15 @@
 	</div>
 	<div class="container">
 		<div class="tb">
-			<h2>Contêiner Cadastrado</h2>
+			<h2>Destino Cadastrado</h2>
 			<div class="conteudo">
-				<div th:text="'Cliente : ' + ${cont.nome} "></div>
-				<div th:text="'Número do Conteiner : ' + ${cont.nmconteiner} "></div>
-				<div th:text="'Tipo : ' + ${cont.tipo} "></div>
-				<div th:text="'Status : ' + ${cont.status} "></div>
-				<div th:text="'Categoria : ' + ${cont.categoria} "></div>
+				<div th:text="'Carga : ' + ${dest.carga} "></div>
+				<div th:text="'Bandeira : ' + ${dest.bandeira} "></div>
+				<div th:text="'Origem : ' + ${dest.origem} "></div>
+				<div th:text="'Destino : ' + ${dest.destino} "></div>
 			</div>
 			
-			<a href="/conteiners">Voltar a Lista</a>
+			<a href="/destino">Voltar a Lista</a>
 		</div>
 	</div>
 </body>

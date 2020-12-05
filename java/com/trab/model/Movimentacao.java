@@ -10,18 +10,18 @@ public class Movimentacao {
 	public Movimentacao() {}
 	
 	public Movimentacao(String navio, String movimentacao, String dataInicio, String dataFim) {
-		Navio = navio;
-		Movimentacao = movimentacao;
-		DataInicio = dataInicio;
-		DataFim = dataFim;
+		this.Navio = navio;
+		this.Movimentacao = movimentacao;
+		this.DataInicio = dataInicio;
+		this.DataFim = dataFim;
 	}	
 	
 	public Movimentacao(int id, String navio, String movimentacao, String dataInicio, String dataFim) {
 		this.id = id;
-		Navio = navio;
-		Movimentacao = movimentacao;
-		DataInicio = dataInicio;
-		DataFim = dataFim;
+		this.Navio = navio;
+		this.Movimentacao = movimentacao;
+		this.DataInicio = dataInicio;
+		this.DataFim = dataFim;
 	}
 
 	public String getNavio() {

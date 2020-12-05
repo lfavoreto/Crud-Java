@@ -14,3 +14,11 @@ CREATE TABLE IF NOT EXISTS Movimentacao (
 	dt_Inicio VARCHAR(10),
 	dt_Final VARCHAR(10)
 );
+
+CREATE TABLE IF NOT EXISTS Destino (
+	id serial PRIMARY KEY,
+	nm_Carga VARCHAR(50),
+	nm_Bandeira VARCHAR(50),
+	ds_Origem VARCHAR(50),
+	ds_Destino VARCHAR(50)
+);

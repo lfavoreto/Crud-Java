@@ -99,7 +99,7 @@ input {
 	padding: 7px;
 }
 
-#nome, #conteiner {
+#nome, #conteiner, #bandeira, #origem, #destino {
 	width: 90%;
 }
 
