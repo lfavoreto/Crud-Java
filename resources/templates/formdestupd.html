@@ -3,140 +3,19 @@
 <head>
 	<title>Cadastro Contêiner</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<style>
-		* {
-			font-family: Helvetica;
-			margin: 0;
-			padding: 0;
-		}
-		
-		h1 {
-			font-weight: normal;
-		}
-		
-		.cab {
-			background-color: gray;
-			color: #F7DC0F;
-			padding: 20px 60px;
-		}
-		
-		.tb {
-			margin: 0 auto;
-			padding: 60px;
-			width: 800px;
-		}
-		
-		a { 
-			color: black; 
-			text-decoration: none;
-		}
-		
-		ul {
-			list-style: none;
-		}
-		
-		.tb>ul {
-			margin-bottom: 25px;
-		}
-		
-		.tb>ul li {
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-		}
-		
-		.tb>ul li a {
-			background-color: white;
-			border: solid 1px #CCC;
-			color: black;
-			padding: 15px 20px;
-		}
-		
-		.tb>ul li a:hover {
-			background-color: gray;
-			color: white;
-		}
-		
-		#bd-esc {
-			background-color: gray;
-			color: white;
-		}
-		
-		.box {
-			border: solid 1px #CCC;
-			border-radius: 10px;
-			display: flex;
-			padding: 20px;
-			max-width: 800px;
-		}
-		
-		.menu { 
-			flex: 2;
-		}
-		
-		.box ul {
-			margin-left: 20px;
-		}
-		
-		.box li {
-			margin-top: 20px;
-		}
-		
-		#cd {
-			border-bottom: solid 2px black;
-		}
-		
-		form {
-			border: solid 1px #CCC;
-			border-radius: 15px;
-			flex: 5;
-			padding: 30px;
-		}
-		
-		label {
-			display: block;
-			font-weight: bold;
-			margin-bottom: 5px;
-			margin-right: 20px;
-			margin-top: 20px;
-		}
-		
-		input {
-			padding: 7px;
-		}
-		
-		#nome, #conteiner {
-			width: 90%;
-		}
-		
-		.first-lb {
-			margin-top: 0;
-		}
-		
-		.ty {
-			display: inline;
-			font-weight: normal;
-		}
-		
-		#botao {
-			cursor: pointer;
-			display: block;
-			font-weight: normal;
-			margin-top: 20px;
-			padding: 2px 7px;
-		}
-	</style>
+	<link rel="stylesheet" href="../../style-upd.css">
 </head>
 <body>
 	<div class="container">
 		<div class="cab">
-			<h1>CRUD JAVA</h1>
+			<h1><a href="/" style="color:#F7DC0F">CRUD JAVA</a></h1>
 		</div>
 
 		<div class="tb">
 			<ul>
-				<li><a href="#" id="bd-esc">Contêiner</a></li>
-				<li><a href="#">Movimentações</a></li>
+				<li><a href="/conteiners">Contêiner</a></li>
+				<li><a href="/Movimentacoes">Movimentações</a></li>
+				<li><a href="/destinos" id="bd-esc">Destino</a></li>
 			</ul>
 
 			<div class="box">
