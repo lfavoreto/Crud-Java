@@ -34,7 +34,16 @@
 					<input type="text" id="nome" th:field="*{Navio}" required>
 					
 					<label for="movimentacao">Descrição da Movimentação</label>
-					<input type="text" id="conteiner" th:field="*{Movimentacao}" required>
+					<select name="movimentacao" required>
+					  <option></option>
+					  <option value="Embarque">Embarque</option> 
+					  <option value="Descarga">Descarga</option>
+					  <option value="Gate In">Gate In</option>
+					  <option value="Gate Out">Gate Out</option>
+					  <option value="Posicionamento Pilha">Posicionamento Pilha</option>
+					  <option value="Pesagem">Pesagem</option>
+					  <option value="Scanner">Scanner</option>
+					</select>
 					
 					<label>Data Inicio</label>
 					<input type="date" name="tip" id="20" th:field="*{DataInicio}" required>

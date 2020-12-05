@@ -32,6 +32,7 @@
 				<table class="table table-striped table-primary">
 					<thead class="ttop">
 						<tr class="table-info">
+							<td></td>
 							<td><b>ID</b></td>
 							<td><b>NAVIO</b></td>
 							<td><b>DESCRIÇÃO DA MOVIMENTACÃO</b></td>
@@ -43,6 +44,9 @@
 					</thead>
 					<tbody>
 						<tr th:each="mov : ${movimentacoes}">
+							<td>
+								<a th:href="@{'Movimentacao/descr/' + ${mov.id}}">&#10148;</a>
+							</td>
 							<td th:text="${mov.id}"></td>
 							<td th:text="${mov.nm_Navio}"></td>
 							<td th:text="${mov.ds_Movimentacao}"></td>
@@ -54,7 +58,7 @@
 								</a>
 							</td>
 							<td>
-								<form th:action="@{'apagar/' + ${mov.id}}" method="POST">
+								<form th:action="@{'Movimentacao/apagar/' + ${mov.id}}" method="POST">
 									<input type="submit" value="X">
 								</form>
 							</td>

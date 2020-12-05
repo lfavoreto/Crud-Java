@@ -3,7 +3,8 @@
 <head>
 	<title>Cadastro Contêiner</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="style-sucesso.css">
+	<link rel="stylesheet" href="../../style-sucesso.css">
+	
 </head>
 <body>
 	<div class="cab">
@@ -11,7 +12,7 @@
 	</div>
 	<div class="container">
 		<div class="tb">
-			<h2>Contêiner Cadastrado</h2>
+			<h2>Movimentação Cadastrada</h2>
 			<div class="conteudo">
 				<div th:text="'Navio : ' + ${mov.Navio} "></div>
 				<div th:text="'Descrocao do Navio : ' + ${mov.Movimentacao} "></div>
@@ -19,8 +20,7 @@
 				<div th:text="'Data Fim : ' + ${mov.DataFim} "></div>
 			</div>
 			
-			<a href="/Movimentacao">Voltar</a>
-			<a href="/Movimentacoes">Ver Lista</a>
+			<a href="/Movimentacoes">Voltar a Lista</a>
 		</div>
 	</div>
 </body>
