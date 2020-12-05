@@ -22,4 +22,8 @@ public class ConteinerService {
 	public List<Map<String, Object>> getConteiners() {
 		return cdao.getConteiners();
 	}
+	
+	public void deleteConteiner(int id) {
+		cdao.deleteConteiner(id);
+	}
 }

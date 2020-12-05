@@ -43,4 +43,9 @@ public class ConteinerDAO{
 		List<Map<String, Object>> conteiners = (List<Map<String, Object>>) jdbc.queryForList(sql);
 		return conteiners;
 	}
+	
+	public void deleteConteiner(int id){
+		String sql = "DELETE FROM Conteiner WHERE id = ?";
+		jdbc.update(sql, new Object[] {id});
+	}
 }

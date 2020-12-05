@@ -51,4 +51,11 @@ public class ConteinerController {
 		model.addAttribute("conteiners", conteiners);
 		return "formlista";
 	}
+	
+	@PostMapping("/apagar/{id}")
+	public String deletar(@PathVariable("id") int id, Model model) {
+		ConteinerService cdao = context.getBean(ConteinerService.class);
+		cdao.deleteConteiner(id);
+		return "redirect:/conteiners";
+	}
 }
