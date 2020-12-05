@@ -47,4 +47,15 @@ public class MovimentacaoDAO{
 		String sql = "DELETE FROM Movimentacao WHERE id = ?";
 		jdbc.update(sql, new Object[] {id});
 	}
+	
+	public void updateMovimentacao(int id, Movimentacao mov) {
+		String sql = "UPDATE Movimentacao SET nm_Navio = ?, ds_Movimentacao = ?, dt_Inicio = ?, dt_Final = ? WHERE id = ?";
+		jdbc.update(sql, new Object[] {
+			mov.getNavio(),
+			mov.getMovimentacao(),
+			mov.getDataInicio(),
+			mov.getDataFim(),
+			id	
+		});
+	}
 };

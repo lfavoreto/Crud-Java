@@ -26,4 +26,8 @@ public class MovimentacaoService {
 	public void deleteMovimentacao(int id) {
 		mdao.deleteMovimentacao(id);
 	}
+	
+	public void updateMovimentacao(int id, Movimentacao mov) {
+		mdao.updateMovimentacao(id, mov);
+	}
 }
