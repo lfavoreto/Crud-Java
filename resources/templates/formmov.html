@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cadastro Movimentacao</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style-form.css">
+</head>
+<body>
+	<div class="container">
+		<div class="cab">
+			<h1>CRUD JAVA</h1>
+		</div>
+
+		<div class="tb">
+			<ul>
+				<li><a href="#" id="bd-esc">Contêiner</a></li>
+				<li><a href="#">Movimentações</a></li>
+			</ul>
+
+			<div class="box">
+				<div class="menu">
+					<h2>Opções</h2>
+					
+					<ul>
+						<li><a href="/conteiner" id="cd">Cadastrar</a></li>
+						<li><a href="/conteiners">Listar</a></li>
+						<li><a href="/">Voltar para o inicio</a></li>
+					</ul>
+				</div>
+				
+				<form action="#" th:action="@{/Movimentacao}" th:object="${mov}" method="POST">
+
+					<label for="nome" class="first-lb">Navio</label>
+					<input type="text" id="nome" th:field="*{Navio}" required>
+					
+					<label for="movimentacao">Descrição da Movimentação</label>
+					<input type="text" id="conteiner" th:field="*{Movimentacao}" required>
+					
+					<label>Data Inicio</label>
+					<input type="date" name="tip" id="20" th:field="*{DataInicio}" required>
+					
+					<label>Data Fim</label>
+					<input type="date" name="tip" id="20" th:field="*{DataFim}" required>
+					
+					<input type="submit" id="botao" value="Cadastrar">
+				</form>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
