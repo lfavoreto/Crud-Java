@@ -51,4 +51,11 @@ public class DestinoController {
 		model.addAttribute("destinos", destinos);
 		return "formlistad";
 	}
+	
+	@PostMapping("destino/apagar/{id}")
+	public String deletar(@PathVariable("id") int id, Model model) {
+		DestinoService ddao = context.getBean(DestinoService.class);
+		ddao.deleteDestino(id);
+		return "redirect:/destinos";
+	}
 }

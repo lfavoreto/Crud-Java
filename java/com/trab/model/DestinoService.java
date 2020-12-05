@@ -22,4 +22,8 @@ public class DestinoService {
 	public List<Map<String, Object>> getDestinos() {
 		return ddao.getDestinos();
 	}
+	
+	public void deleteDestino(int id) {
+		ddao.deleteDestino(id);
+	}
 }
