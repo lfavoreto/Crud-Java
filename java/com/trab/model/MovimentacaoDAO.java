@@ -1,5 +1,8 @@
 package com.trab.model;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
@@ -27,5 +30,16 @@ public class MovimentacaoDAO{
 				mov.getDataInicio(),
 				mov.getDataFim(),
 		});
+	}
+	
+	public Map<String, Object> getMovimentacao(int id){
+		String sql = "SELECT * FROM Movimentacao WHERE Movimentacao.id = ?";
+		return jdbc.queryForMap(sql, new Object[] {id});
+	}
+	
+	public List<Map<String, Object>> getMovimentacoes(){
+		String sql = "SELECT * FROM Movimentacao";
+		List<Map<String, Object>> movimentacoes = (List<Map<String, Object>>) jdbc.queryForList(sql);
+		return movimentacoes;
 	}
 };
