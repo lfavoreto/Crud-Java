@@ -6,3 +6,11 @@ CREATE TABLE IF NOT EXISTS Conteiner (
 	ic_Status varchar(5),
 	ic_Categoria varchar(10)
 );
+
+CREATE TABLE IF NOT EXISTS Movimentacao (
+	id serial PRIMARY KEY,
+	nm_Navio VARCHAR(100),
+	ds_Movimentacao VARCHAR(50),
+	dt_Inicio VARCHAR(10),
+	dt_Final VARCHAR(10)
+);
